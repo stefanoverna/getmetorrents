@@ -1,0 +1,59 @@
+doctype 5
+html
+  head
+    title Get me torrents!
+    == css :application, media: 'screen'
+    link title="getmetorrents.com" rel="search" type="application/opensearchdescription+xml" href="/search_provider.xml"
+    meta name="google-site-verification" content="tmSCK18Gm1ExTF0tziUK49Gpw0qLaQqXSum4dADf0PY"
+  body
+    #border: #wrapper
+      #infos
+        p Getmetorrents.com is a <a href="/#/about">minimal torrent search experiment</a>.
+        p
+          ' You get a clean list of direct links to torrents. We do the hard job of 
+            browsing bloated third-party search-engines and trackers for you.
+
+        ul
+          li class="flattr"
+            a class="FlattrButton" style="display:none;" rev="flattr;button:compact;" href="http://getmetorrents.com"
+          li class="facebook"
+            div class="fb-like" data-href="http://getmetorrents.com/" data-send="false" data-layout="button_count" data-width="85" data-height="21" data-show-faces="false"
+          li class="twitter"
+            a href="https://twitter.com/share" class="twitter-share-button" data-url="http://getmetorrents.com/" Tweet
+          li class="google-plus"
+            div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://getmetorrents.com/"
+
+      #about
+        p.back: a href="/" &larr; Back to search
+
+        h2.first How it works
+        p
+          ' Getmetorrents.com is a web-scraper. It first performs a search on 
+            <a href="http://torrentz.eu/">Torrentz</a>, retrieving a list of matching 
+            torrents. For each torrent it gets, the following attempts are made in real-time:
+
+        ul
+          li The torrent hash is searched in <a href="http://torcache.net/">Torcache</a> and <a href="http://torrage.com/">Torrage</a>;
+          li If the previous step fails, we scan the tracker pages listed on Torrentz, looking for magnet/torrent links;
+
+        h2 Source code
+        p The website uses <a href="http://www.sinatrarb.com/">Sinatra</a>, <a href="http://nokogiri.org/">Nokogiri</a> and <a href="https://github.com/defunkt/resque">Resque</a> to work. The source code for both the website and the scraper will be soon open-sourced.
+
+        h2 Interested in future updates of this project?
+
+        form#subscribe action="#/subscribe" method="POST"
+          label for="email" Your email
+          input type="email" name="email" placeholder="your@email.com"
+          button Subscribe
+          p.infos (extra-low traffic, max a mail per month)
+
+        h2 Legal
+        ul
+          li We <strong>do not</strong> store any informations on our servers, we simply scrape existing thirdy-party websites;
+          li We <strong>do not</strong> run our own trackers;
+          li We <strong>do not</strong> log any IP address;
+
+      == yield
+
+    #fb-root
+    == js :application

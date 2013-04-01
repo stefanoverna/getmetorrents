@@ -1,0 +1,18 @@
+#app
+  form#search action="#/search" method="GET"
+    label for="query" Get me torrents for
+    input type="text" name="query" placeholder="Ubuntu ISO" autocomplete="off"
+    button 
+      span.icon-right
+
+  span#loading.spinner
+
+  #results
+    table
+      thead
+        th.title Title
+        th.size Size
+        th.seeds Seeds
+        th.peers Peers
+        th.download 
+      tbody

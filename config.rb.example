@@ -1,0 +1,8 @@
+module NannyConfig
+  HOST             =  'http://127.0.0.1:3000'
+  SOCKY_PASSWORD   =  'password'
+  SOCKY_DEBUG      =  false
+  REDIS_URL        =  'redis://127.0.0.1:6379'
+  RESQUE_NAMESPACE =  'resque:nanny'
+  RESQUE_AUTH      =  false
+end
