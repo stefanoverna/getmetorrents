@@ -1,0 +1,32 @@
+{
+  "name": "Get me torrents!",
+  "version": "1.1",
+  "manifest_version": 2,
+  "update_url": "http://getmetorrents.com/chrome/updates.xml",
+
+  "description": "Searching torrents has never been easier.",
+  "icons": {
+     "128": "128.png",
+     "16": "favicon.ico",
+     "48": "48.png"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "19.png",
+      "38": "38.png"
+    },
+    "default_title": "Get me Torrents!"
+  },
+  "background": {
+    "scripts": [ 
+      "js/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
+

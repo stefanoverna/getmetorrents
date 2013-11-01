@@ -16,4 +16,7 @@ ruby/config.rb
 ruby/log/*
 ruby/config/deploy.rb
 ruby/config.rb
+ruby/bin/stubs
+chrome/bin/stubs
+chrome/js/*
 
