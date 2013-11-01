@@ -1,5 +1,0 @@
-require 'coffee_script'
-
-guard 'sprockets', destination: 'js', asset_paths: ['src'], root_file: ['src/app.js.coffee', 'src/background.js.coffee'] do
-  watch %r{src/*}
-end
